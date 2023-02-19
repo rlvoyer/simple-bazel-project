@@ -1,0 +1,9 @@
+load("@io_bazel_rules_go//go:def.bzl", "go_library")
+
+go_library(
+    name = "pkg",
+    srcs = ["server.go"],
+    importpath = "github.com/rlvoyer/simple_bazel_project/rpc_server/pkg",
+    visibility = ["//visibility:public"],
+    deps = ["//proto:sample_protos_lib"],
+)

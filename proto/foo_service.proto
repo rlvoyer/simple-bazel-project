@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package sample;
+
+option go_package = "github.com/rlvoyer/simple_bazel_project/protos";
+
+import "proto/foo.proto";
+
+message FooCreateRequest {
+  sample.Foo foo = 1;
+}
+
+message FooCreateResponse {
+  sample.Foo foo = 1;
+}
+
+service FooService {
+  rpc Create(FooCreateRequest) returns (FooCreateResponse);
+}

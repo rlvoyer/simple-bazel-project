@@ -1,0 +1,9 @@
+syntax = "proto3";
+
+package sample;
+
+option go_package = "github.com/rlvoyer/simple_bazel_project/protos";
+
+message Foo {
+  string value = 1;
+}
